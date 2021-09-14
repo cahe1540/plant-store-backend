@@ -7,16 +7,18 @@ public class Product {
     private String image;
     private double discount;
     private int stock;
+    private String productName;
 
     public Product(){};
 
-    public Product(int productId, String description, double price, String image, double discount, int stock) {
+    public Product(int productId, String description, double price, String image, double discount, int stock, String productName) {
         this.productId = productId;
         this.description = description;
         this.price = price;
         this.image = image;
         this.discount = discount;
         this.stock = stock;
+        this.productName = productName;
     }
 
     public int getProductId() {
@@ -67,6 +69,14 @@ public class Product {
         this.stock = stock;
     }
 
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -76,6 +86,7 @@ public class Product {
                 ", image='" + image + '\'' +
                 ", discount=" + discount +
                 ", stock=" + stock +
+                ", productName='" + productName + '\'' +
                 '}';
     }
 }

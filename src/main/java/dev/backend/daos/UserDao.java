@@ -22,9 +22,9 @@ public interface UserDao {
     /**
      * Deletes a user based on their unique ID.
      * @param userId The userId of the user you wish to delete.
-     * @return True if the user is deleted successfully, or raises an error
+     * @return True if the user is deleted successfully, or false if user is not found
      */
-    public void deleteUser(int userId);
+    public boolean deleteUser(int userId);
 
     /**
      * Updates a users information based on their unique ID
